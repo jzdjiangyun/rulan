@@ -260,10 +260,21 @@ html {
   position: relative;
   width: 501px;
   height: 791px;
+  box-sizing: border-box;
   background: url(../img/p2-center-box.png);
   top: 255px;
   left: 50%;
   margin-left: -250px;
+}
+.confirm-to-upload .box-font .rahmen {
+  width: 496px;
+  height: 786px;
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  margin: auto;
   overflow: hidden;
 }
 .confirm-to-upload .box-font .center-box {
@@ -494,6 +505,15 @@ html {
 .ranking-box .back img {
   position: static;
 }
+.ranking-box .reopen {
+  position: absolute;
+  top: 1175px;
+  left: 50%;
+  margin-left: -121px;
+}
+.ranking-box .reopen img {
+  position: static;
+}
 .ranking-box .list {
   position: relative;
   top: 210px;
@@ -506,7 +526,7 @@ html {
   height: 120px;
   border-radius: 20px;
   background: rgba(229, 246, 246, 0.5);
-  margin-bottom: 48px;
+  margin-bottom: 40px;
   display: flex;
   align-items: center;
 }

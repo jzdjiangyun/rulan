@@ -289,11 +289,25 @@ left: 678px;
     position: relative;
     width: 501px;
     height: 791px;
+ 
+    box-sizing: border-box;
+  
     background: url(../img/p2-center-box.png);
     top: 255px;
     left:50%;
     margin-left: -250px;
-    overflow: hidden;
+    .rahmen{
+      width: 496px;
+      height: 786px;
+      position: absolute;
+      left:0;
+      right:0;
+      top:0;
+      bottom: 0;
+      margin: auto;
+      overflow: hidden;
+    }
+    
     .center-box{
         position: absolute;
         left:50%;
@@ -533,6 +547,15 @@ left: 678px;
              position: static;
          }
      }
+     .reopen{
+         position: absolute;
+         top: 1175px;
+        left:50%;
+        margin-left: -121px;
+         img{
+             position: static;
+         }
+     }
      .list{
          position: relative;
          top: 210px;
@@ -544,7 +567,7 @@ left: 678px;
            height: 120px;
            border-radius: 20px;
            background:rgba(229, 246, 246, .5);
-           margin-bottom: 48px;
+           margin-bottom: 40px;
            display: flex;
            align-items: center;
            .head{

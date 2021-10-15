@@ -53,12 +53,21 @@ $(function(){
   $('.p3-share').click(function(){
       console.log('分享');
   })
+  $('.share-btn').click(function(){
+      console.log('分享');
+  })
+
   //排行版按钮
   $('.p3-sort').click(function(){
       $('.share').addClass('dn');
       $('.hint').removeClass('dn');
       $('.ranking-box').removeClass('dn');
   })
+//点赞
+$('.reopen').click(function(){
+    console.log('我也要玩');
+})
+
 
 
    /* 排行榜数据  */
@@ -114,6 +123,8 @@ $('.list').html(htmlStr);
 
   var startX=0;
   var startY=0;
+  var lateX=0;
+  var lateY=0;
   //把网络图片转换成 64
   function getBase64(imgUrl,img) {
       window.URL = window.URL || window.webkitURL;
@@ -173,12 +184,15 @@ $('.list').html(htmlStr);
         
              alert(res.message);
          }
+         lateX=0;
+         lateY=0;
+         dom.parent().css('transform','translate(0px,0px)');
       dom.parent().on('touchstart',function(e){
   
-          startX=e.targetTouches[0].clientX;
-          startY=e.targetTouches[0].clientY;
+          startX=e.targetTouches[0].clientX-lateX;
+          startY=e.targetTouches[0].clientY-lateY;
       
-          console.log(startX,startY)
+          console.log(lateX,lateY)
       })
       dom.parent().on('touchmove',function(e){
           console.log(e.targetTouches[0].clientX-startX,$(this).offset().top)
@@ -187,6 +201,8 @@ $('.list').html(htmlStr);
           $(this).css({
               transform:'translate('+ x+'px,'+ y+'px)'
           })
+          lateX=x;
+          lateY=y;
       })
     
   }
