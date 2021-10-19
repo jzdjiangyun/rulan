@@ -11,13 +11,23 @@ html {
 .box {
   width: 100%;
   height: 100%;
+  overflow: hidden;
+  position: relative;
+}
+.box-img {
+  position: absolute;
+}
+.box-img img {
+  position: static;
+}
+[class*='star'] {
+  animation: flash 1s infinite;
 }
 .index .model-top {
   height: 1120px;
   width: 100%;
   position: absolute;
   z-index: 4;
-  background: rgba(0, 255, 0, 0.3);
 }
 .index .model-middle {
   height: 1250px;
@@ -25,7 +35,6 @@ html {
   position: absolute;
   top: 1120px;
   z-index: 4;
-  background: rgba(255, 0, 0, 0.3);
 }
 .index .model-down {
   height: 1130px;
@@ -33,7 +42,6 @@ html {
   position: absolute;
   top: 2370px;
   z-index: 4;
-  background: rgba(0, 0, 255, 0.3);
 }
 .index .logo {
   top: 75px;
@@ -41,10 +49,34 @@ html {
   right: 0;
   margin: auto;
 }
+.index .logo-box {
+  position: absolute;
+  top: 75px;
+  width: 288px;
+  height: 103px;
+  left: 50%;
+  margin-left: -144px;
+  overflow: hidden;
+  animation: width 3s forwards;
+}
 .index .title {
   left: 0;
   right: 0;
   margin: auto;
+}
+.index .title-box {
+  top: 240px;
+  width: 446px;
+  height: 242px;
+  left: 0;
+  right: 0;
+  margin: auto;
+  animation: height 3s forwards;
+  position: absolute;
+  overflow: hidden;
+}
+.index .title-box img {
+  position: static;
 }
 .index .top-balloon {
   top: 380px;
@@ -68,6 +100,33 @@ html {
 .index .top-balloon2 {
   top: 865px;
   right: 10px;
+}
+.index .sidai {
+  position: absolute;
+  width: 572px;
+  height: 540px;
+}
+.index .sidai img {
+  position: static;
+}
+.index .sidai div {
+  height: 540px;
+  overflow: hidden;
+  animation: right 2s forwards;
+}
+.index .sidai1 {
+  position: absolute;
+  width: 750px;
+  height: 3490px;
+}
+.index .sidai1 img {
+  position: static;
+}
+.index .sidai1 div {
+  width: 750px;
+  height: 630px;
+  overflow: hidden;
+  animation: down 4s 2s forwards;
 }
 .index .model {
   top: 1120px;
@@ -148,8 +207,12 @@ html {
   z-index: 2;
 }
 .create-poster .p1-reback {
+  position: absolute;
   top: 40px;
   right: 35px;
+}
+.create-poster .p1-reback img {
+  position: static;
 }
 .create-poster .p1-star {
   top: 185px;
@@ -173,12 +236,22 @@ html {
 }
 .create-poster .p1-sidai {
   right: 0;
+  position: absolute;
+  height: 100%;
+  overflow: hidden;
+}
+.create-poster .p1-sidai img {
+  position: static;
 }
 .create-poster .rule-btn {
+  position: absolute;
   top: 440px;
-  left: 0;
-  right: 0;
-  margin: auto;
+  left: 50%;
+  margin-left: -88px;
+}
+.create-poster .rule-btn img {
+  position: static;
+  display: block;
 }
 .create-poster .p1-leave-words {
   position: relative;
@@ -234,6 +307,12 @@ html {
 }
 .confirm-to-upload .p2-sidai {
   right: 0;
+  position: absolute;
+  height: 100%;
+  overflow: hidden;
+}
+.confirm-to-upload .p2-sidai img {
+  position: static;
 }
 .confirm-to-upload .tab {
   position: absolute;
@@ -292,6 +371,9 @@ html {
 }
 .confirm-to-upload .box-font .box-font-ul li.active {
   display: block;
+}
+.confirm-to-upload .box-font .box-font-ul li img {
+  /*       animation: flash 1s ; */
 }
 .confirm-to-upload .box-font .p2-box-font {
   top: 45px;
@@ -514,6 +596,11 @@ html {
 .ranking-box .reopen img {
   position: static;
 }
+.ranking-box .reopen-shadow {
+  top: 1185px;
+  left: 50%;
+  margin-left: -172px;
+}
 .ranking-box .list {
   position: relative;
   top: 210px;
@@ -571,7 +658,134 @@ html {
 }
 .ranking-box .list li .like.isLike .rank-heart {
   display: block;
+  animation: scale 1s;
 }
 .ranking-box .list li .like.isLike .rank-heart2 {
   display: none;
+}
+.test .star {
+  top: 130px;
+  left: 295px;
+}
+.test .star1 {
+  top: 160px;
+  left: 600px;
+}
+.test .star2 {
+  top: 408px;
+  left: 625px;
+}
+.test .star3 {
+  top: 1090px;
+  left: 615px;
+}
+.test .star4 {
+  top: 1155px;
+  left: 72px;
+}
+.test .star5 {
+  top: 1265px;
+  left: 622px;
+}
+.test .back {
+  position: absolute;
+  top: 40px;
+  left: 650px;
+}
+.test .back img {
+  position: static;
+}
+.test .model {
+  top: 36px;
+  left: 107px;
+}
+.test .circle,
+.test .circle2 {
+  top: 35px;
+  left: 370px;
+}
+.test .sidai {
+  top: 310px;
+}
+.test ul {
+  position: relative;
+  top: 475px;
+}
+.test .font {
+  top: 1100px;
+  left: 0;
+  right: 0;
+  margin: auto;
+}
+.test .btn {
+  position: absolute;
+  top: 1165px;
+  left: 50%;
+  margin-left: -121.5px;
+}
+.test .btn img {
+  position: static;
+}
+.test .btn-shadow {
+  top: 1180px;
+  left: 50%;
+  margin-left: -174px;
+}
+@keyframes width {
+  0% {
+    width: 0px;
+  }
+  100% {
+    width: 288px;
+  }
+}
+@keyframes height {
+  0% {
+    height: 0px;
+  }
+  100% {
+    height: 242px;
+  }
+}
+@keyframes reveal {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+@keyframes right {
+  0% {
+    width: 0;
+  }
+  100% {
+    width: 100%;
+  }
+}
+@keyframes down {
+  100% {
+    height: 100%;
+  }
+}
+@keyframes flash {
+  from,
+  50%,
+  to {
+    opacity: 1;
+  }
+  25%,
+  75% {
+    opacity: 0;
+  }
+}
+@keyframes scale {
+  100% {
+    transform: scale(1.2);
+  }
+}
+@media screen and (max-height: 1230px) {
+  body .box {
+    transform: scale(0.9);
+  }
 }

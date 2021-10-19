@@ -12,6 +12,8 @@ body ,html{
 .box{
     width: 100%;
     height: 100%;
+    overflow: hidden;
+    position: relative;
 }
 .top(@top){
     
@@ -21,13 +23,22 @@ body ,html{
     right: 0;
     margin: auto;
 }
+.box-img{
+    position: absolute;
+    img{
+        position: static;
+    }
+}
+[class*='star']{
+    animation: flash 1s infinite;
+}
 .index{
 .model-top{
     height: 1120px;
     width: 100%;
     position: absolute;
     z-index: 4;
-    background: rgba(0, 255, 0, .3);
+
 }
 .model-middle{
     height: 1250px;
@@ -35,7 +46,7 @@ body ,html{
     position: absolute;
     top: 1120px;
     z-index: 4;
-    background: rgba(255, 0, 0, .3);
+   
 }
 .model-down{
     height: 1130px;
@@ -43,15 +54,39 @@ body ,html{
     position: absolute;
     top: (1120px+1250px);
     z-index: 4;
-    background: rgba(0, 0, 255, .3);
+   
 }
     .logo{
     top: 75px;
     .center();
     }
+    .logo-box{
+        position: absolute;
+       top:75px;
+       width: 288px;
+       height: 103px;
+       left:50%;
+       margin-left: -144px;
+        overflow: hidden;
+        animation: width 3s forwards;
+
+    }
     .title{
       
         .center();
+    }
+    .title-box{
+        top: 240px;
+        width: 446px;
+        height: 242px;
+        .center();
+        animation: height 3s forwards;
+
+        position: absolute;
+         overflow: hidden;
+         img{
+             position: static;
+         }
     }
     .top-balloon{
         top: 380px;
@@ -80,7 +115,29 @@ body ,html{
     }
 
 
+   .sidai{
+       .box-img();
+       width: 572px;
+       height: 540px;
+       div{
+           height: 540px;
+        overflow: hidden;
+         animation: right 2s forwards;
+       }
+   }
+   .sidai1{
+       .box-img();
+       width: 750px;
+       height: 3490px;
+       div{
+           width: 750px;
+           height: 630px;
+           overflow: hidden;
+  animation: down 4s 2s forwards;
 
+
+       }
+   }
     .model{
         top:1120px;
         left:170px;
@@ -168,8 +225,12 @@ body ,html{
 }
 .create-poster{
   .p1-reback{
+      position: absolute;
       top: 40px;
       right: 35px;
+      img{
+          position: static;
+      }
   }
   .p1-star{
       top: 185px;
@@ -195,11 +256,20 @@ body ,html{
 
   .p1-sidai{
       right:0;
+      .box-img();
+      height: 100%;
+      overflow: hidden;
   }
   
 .rule-btn{
+    position: absolute;
     top: 440px;
-    .center();
+    left:50%;
+    margin-left:-88px;
+     img{
+         position: static;
+         display: block;
+     }
 }
 .p1-leave-words{
     position: relative;
@@ -258,7 +328,11 @@ left: 678px;
     left: 610px;
 }
 .p2-sidai{
+  
     right:0;
+    .box-img();
+    height: 100%;
+    overflow: hidden;
 }
 .tab{
     position: absolute;
@@ -323,6 +397,9 @@ left: 678px;
       display: none;
       &.active{
           display: block;
+      }
+      img{
+    /*       animation: flash 1s ; */
       }
     }
     .p2-box-font{
@@ -556,6 +633,11 @@ left: 678px;
              position: static;
          }
      }
+     .reopen-shadow{
+        top: 1185px;
+        left: 50%;
+        margin-left: -172px
+     }
      .list{
          position: relative;
          top: 210px;
@@ -608,7 +690,7 @@ left: 678px;
            .like{
             img{
                 position: static;
-              
+        
              }
             .rank-heart{
                 display: none;
@@ -617,6 +699,8 @@ left: 678px;
               
                 .rank-heart{
                     display: block;
+                    animation: scale 1s;
+                 
                 }
                 .rank-heart2{
                     display: none;
@@ -628,7 +712,140 @@ left: 678px;
          }
      }
 }
-@media screen  and(max-height:1230px) {
+.test{
+    .star{
+        top: 130px;
+        left: 295px;
+    }
+    .star1{
+        top: 160px;
+        left:600px;
+    }
+    .star2{
+        top: 408px;
+        left: 625px;
+    }
+    .star3{
+        top: 1090px;
+        left: 615px;
+    }
+    .star4{
+        top: 1155px;
+        left: 72px;
+    }
+    .star5{
+        top: 1265px;
+        left: 622px;
+    }
+    .back{
+        position: absolute;
+        top:40px;
+        left: 650px;
+        img{
+            position: static;
+        }
+    }
+    .model{
+        top:36px;
+        left: 107px;
+    }
+    .circle,
+    .circle2{
+        top: 35px;
+        left: 370px;
+    }
+    .sidai{
+        top: 310px;
+    }
+    ul{
+        position:relative;
+        top: 475px;
+    }
+    .font{
+        top:1100px;
+        .center();
+    }
+    .btn{
+        position: absolute;
+        top: 1165px;
+        left:50%;
+        margin-left:-121.5px;
+        img{
+            position: static;
+        }
+    }
+    .btn-shadow{
+        top: 1180px;
+        left: 50%;
+        margin-left: -174px;
+    }
+}
+@keyframes width  {
+    0%{
+        width: 0px;
+    }
+    100%{
+        width:288px;
+    }
+    
+}
+@keyframes height {
+    0%{
+        height: 0px;
+    }
+    100%{
+        height:242px;
+    }
+    
+}
+@keyframes reveal  {
+    0%{
+        opacity: 0;
+    }
+    100%{
+        opacity: 1;
+    }
+}
+@keyframes right {
+    0%{
+      
+        width: 0;
+    }
+    100%{
+        
+        width: 100%;
+    }
+}
+@keyframes down{
+
+    100%{
+        
+        height: 100%;
+    }
+}
+@keyframes flash {
+    from,
+    50%,
+    to {
+      opacity: 1;
+    }
+  
+    25%,
+    75% {
+      opacity: 0;
+    }
+  }  
+  @keyframes scale {
+      100%{
+         transform: scale(1.2);
+      }
+  }
+
+@media screen and(max-height:1230px) {
     body{
+      
+      .box{
+          transform: scale(.9);
+      }
     }
 }
