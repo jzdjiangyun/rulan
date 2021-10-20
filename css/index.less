@@ -134,8 +134,6 @@ body ,html{
            height: 630px;
            overflow: hidden;
   animation: down 4s 2s forwards;
-
-
        }
    }
     .model{
@@ -757,10 +755,8 @@ left: 678px;
     .sidai{
         top: 310px;
     }
-    ul{
-        position:relative;
-        top: 475px;
-    }
+        
+
     .font{
         top:1100px;
         .center();
@@ -772,6 +768,7 @@ left: 678px;
         margin-left:-121.5px;
         img{
             position: static;
+            
         }
     }
     .btn-shadow{
@@ -779,6 +776,79 @@ left: 678px;
         left: 50%;
         margin-left: -174px;
     }
+    .swiper-container{
+        height: 570px;
+      
+        position:relative;
+        top: 475px;
+       
+      .swiper-slide-active >div{
+        animation:  swing 2s ;
+      }
+     
+            .swiper-slide{  
+            .backOutDown{
+                animation: backOutDown 1s forwards;
+            }
+        
+            >div{
+            
+            position: absolute;
+            transform-origin: center top;
+         
+         
+            img{
+                position: static;
+              
+            }
+           
+    &:nth-of-type(1){
+        top:0;
+                left:402px
+        }
+        &:nth-of-type(2){
+            left:40px;
+            top: 110px;
+        }
+        &:nth-of-type(3){
+            top:225px;
+            left: 404px;
+        }
+        &:nth-of-type(4){
+            left:50px;
+            top: 335px;
+        }
+        }
+    }
+    }
+    
+}
+.test-result{
+    .star{
+        top: 35px;
+        left: 183px;
+    }
+    .star1{
+        top: 100px;
+        left: 588px;
+    }
+    .star2{
+        top: 450px;
+        left: 32px;
+    }
+    .star3{
+        top: 905px;
+        left: 693px;
+    }
+    .star4{
+        top: 1203px;
+        left: 50px;
+    }
+    .star5{
+        top: 1265px;
+        left: 470px;
+    }
+
 }
 @keyframes width  {
     0%{
@@ -841,6 +911,53 @@ left: 678px;
       }
   }
 
+  @keyframes swing {
+    20% {
+      -webkit-transform: rotate3d(0, 0, 1, 15deg);
+      transform: rotate3d(0, 0, 1, 15deg);
+    }
+  
+    40% {
+      -webkit-transform: rotate3d(0, 0, 1, -10deg);
+      transform: rotate3d(0, 0, 1, -10deg);
+    }
+  
+    60% {
+      -webkit-transform: rotate3d(0, 0, 1, 5deg);
+      transform: rotate3d(0, 0, 1, 5deg);
+    }
+  
+    80% {
+      -webkit-transform: rotate3d(0, 0, 1, -5deg);
+      transform: rotate3d(0, 0, 1, -5deg);
+    }
+  
+    to {
+      -webkit-transform: rotate3d(0, 0, 1, 0deg);
+      transform: rotate3d(0, 0, 1, 0deg);
+    }
+  }
+
+  
+@keyframes backOutDown {
+    0% {
+      -webkit-transform: scale(1);
+      transform: scale(1);
+      opacity: 1;
+    }
+  
+    20% {
+      -webkit-transform: translateY(0px) scale(0.7);
+      transform: translateY(0px) scale(0.7);
+      opacity: 0.7;
+    }
+  
+    100% {
+      -webkit-transform: translateY(700px) scale(0.7);
+      transform: translateY(700px) scale(0.7);
+      opacity: 0.7;
+    }
+  }
 @media screen and(max-height:1230px) {
     body{
       

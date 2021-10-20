@@ -7,13 +7,14 @@
     <meta name="viewport" content="width=750, user-scalable=no, target-densitydpi=device-dpi">
     <title>和瑞蓝一起25岁</title>
     <link rel="stylesheet" href="css/reset.css">
+    <link rel="stylesheet" href="css/swiper-bundle.min.css">
     <link rel="stylesheet" href="css/index.css">
 </head>
 
 <body>
     <a id='download' style="display: none;"></a>
     <!-- 首页 -->
-    <div class="index dn ">
+    <div class="index   ">
         <section class="model-top"></section>
         <section class="model-middle"></section>
         <section class="model-down"></section>
@@ -73,8 +74,8 @@
     <div class="box create-poster dn">
         <img src="img/p1-card.png" alt="" class="p1-card">
         <div class="p1-sidai">
-        <img src="img/p1-sidai.png" alt="">
-    </div>
+            <img src="img/p1-sidai.png" alt="">
+        </div>
         <img src="img/p1-star.png" alt="" class="p1-star">
         <img src="img/p1-star2.png" alt="" class="p1-star2">
         <div class="p1-reback">
@@ -118,8 +119,8 @@
         <img src="img/p2-star4.png" alt="" class="p2-star4">
         <img src="img/p2-star5.png" alt="" class="p2-star5">
         <div class="p2-sidai">
-        <img src="img/p2-sidai.png" alt="" >
-    </div>
+            <img src="img/p2-sidai.png" alt="">
+        </div>
         <ul class="tab">
             <li class="active"> <img src="img/p2-font.png" alt="" class="p2-font num-box">
                 <img src="img/pitch.png" alt="" class="pitch">
@@ -257,7 +258,7 @@
     </div>
     <!-- 排行榜结束-->
     <!-- 美丽测试 -->
-    <div class="box test dn">
+    <div class="box test dn ">
         <img src="img/p1-star5.png" alt="" class="star">
         <img src="img/p1-star5.png" alt="" class="star3">
         <img src="img/p1-star.png" alt="" class="star1">
@@ -273,34 +274,45 @@
         <img src="img/decompression-model.png" alt="" class="model">
         <ul>
             <li>
-                <div class="label">
-                    <img src="img/decompression-tab.png" alt="">
-                </div>
-                <div class="label">
-                    <img src="img/decompression-tab1.png" alt="">
-                </div>
-                <div class="label">
-                    <img src="img/decompression-tab2.png" alt="">
-                </div>
-                <div class="label">
-                    <img src="img/decompression-tab3.png" alt="">
-                </div>
+
             </li>
-            <li>
-                <div class="label">
-                    <img src="img/decompression-tab4.png" alt="">
-                </div>
-                <div class="label">
-                    <img src="img/decompression-tab5.png" alt="">
-                </div>
-                <div class="label">
-                    <img src="img/decompression-tab6.png" alt="">
-                </div>
-                <div class="label">
-                    <img src="img/decompression-tab7.png" alt="">
-                </div>
+            <li class="dn">
+
             </li>
         </ul>
+        <div class="swiper-container">
+            <div class="swiper-wrapper">
+                <div class="swiper-slide">
+                    <div class="label">
+                        <img src="img/decompression-tab.png" alt="">
+                    </div>
+                    <div class="label">
+                        <img src="img/decompression-tab1.png" alt="">
+                    </div>
+                    <div class="label">
+                        <img src="img/decompression-tab2.png" alt="">
+                    </div>
+                    <div class="label">
+                        <img src="img/decompression-tab3.png" alt="">
+                    </div>
+                </div>
+                <div class="swiper-slide">
+                    <div class="label">
+                        <img src="img/decompression-tab4.png" alt="">
+                    </div>
+                    <div class="label">
+                        <img src="img/decompression-tab5.png" alt="">
+                    </div>
+                    <div class="label">
+                        <img src="img/decompression-tab6.png" alt="">
+                    </div>
+                    <div class="label">
+                        <img src="img/decompression-tab7.png" alt="">
+                    </div>
+                </div>
+            </div>
+        </div>
+
         <img src="img/decompression-font.png" alt="" class="font">
         <img src="img/decompression-btn-shadow.png" alt="" class="btn-shadow">
         <div class="btn">
@@ -308,8 +320,21 @@
         </div>
     </div>
     <!-- 美丽测试结束 -->
+  <!-- 测试结果 -->
+  <div class="box  test-result dn">
+      <img src="img/p1-star5.png" alt="" class="star">
+      <img src="img/p1-star5.png" alt="" class="star3">
+      <img src="img/p3-star1.png" alt="" class="star1">
+      <img src="img/p3-star1.png" alt="" class="star4">
+      <img src="img/p3-star2.png" alt="" class="star2">
+      <img src="img/p3-star2.png" alt="" class="star5">
+      <div class="back">
+          <img src="img/b" alt="">
+      </div>
 
 
+  </div>
+<!-- 测试结果结束 -->
     <!-- 排行榜模板 -->
     <script type="text/html" id='rank'>
         {{each arr}}
@@ -347,6 +372,8 @@
     <script src="js/jquery-3.6.0.js"></script>
     <script src="js/html2canvas.js"></script>
     <script src="js/template-web.js"></script>
+    <script src="js/preload.js"></script>
+    <script src="js/swiper-bundle.min.js"></script>
     <script src="js/index.js"></script>
     <script>
 

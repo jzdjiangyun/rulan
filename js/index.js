@@ -1,20 +1,133 @@
 var flag = false;//用于判断有没有上传文件
 var img = null//用保存转换的图片
-
+var manifest = [  
+    'img/bg-down.png',  
+    'img/bg-top.png',  
+    'img/bg.png',  
+    'img/decompression-btn-shadow.png',  
+    'img/decompression-btn.png',  
+    'img/decompression-circle.png',  
+    'img/decompression-circle2.png',  
+    'img/decompression-font.png',  
+    'img/decompression-hint.png',  
+    'img/decompression-model.png',  
+    'img/decompression-model2.png',  
+    'img/decompression-sidai.png',  
+    'img/decompression-tab.png',  
+    'img/decompression-tab1.png',  
+    'img/decompression-tab2.png',  
+    'img/decompression-tab3.png',  
+    'img/decompression-tab4.png',  
+    'img/decompression-tab5.png',  
+    'img/decompression-tab6.png',  
+    'img/decompression-tab7.png',  
+    'img/down-balloon.png',  
+    'img/head.png',  
+    'img/head1.png',  
+    'img/head2.png',  
+    'img/head3.png',  
+    'img/head4.png',  
+    'img/head5.png',  
+    'img/heart2.png',  
+    'img/heart3.png',  
+    'img/home.png',  
+    'img/img1.png',  
+    'img/img2.png',  
+    'img/img3.png',  
+    'img/img4.png',  
+    'img/img5.png',  
+    'img/img6.png',  
+    'img/logo.png',  
+    'img/midde-balloon1.png',  
+    'img/middle-heart2.png',  
+    'img/middle-test.png',  
+    'img/model.png',  
+    'img/p1-card.png',  
+    'img/p1-create-poster.png',  
+    'img/p1-leave-words.png',  
+    'img/p1-reback.png',  
+    'img/p1-sidai.png',  
+    'img/p1-star.png',  
+    'img/p1-star2.png',  
+    'img/p1-star3.png',  
+    'img/p1-star4.png',  
+    'img/p1-star5.png',  
+    'img/p1-star6.png',  
+    'img/p2-box-font.png',  
+    'img/p2-box2-font.png',  
+    'img/p2-box2-font2.png',  
+    'img/p2-box3-font.png',  
+    'img/p2-box3-font2.png',  
+    'img/p2-box4-font.png',  
+    'img/p2-box4-font2.png',  
+    'img/p2-box5-font.png',  
+    'img/p2-box5-font2.png',  
+    'img/p2-center-box.png',  
+    'img/p2-font.png',  
+    'img/p2-font2.png',  
+    'img/p2-font3.png',  
+    'img/p2-font4.png',  
+    'img/p2-right.png',  
+    'img/p2-sidai.png',  
+    'img/p2-star.png',  
+    'img/p2-star2.png',  
+    'img/p2-star3.png',  
+    'img/p2-star4.png',  
+    'img/p2-star5.png',  
+    'img/p2-upload-show.png',  
+    'img/p2-upload.png',  
+    'img/p3-reopen.png',  
+    'img/p3-save-shadow.png',  
+    'img/p3-save.png',  
+    'img/p3-share.png',  
+    'img/p3-sort-shashow.png',  
+    'img/p3-sort.png',  
+    'img/p3-star.png',  
+    'img/p3-star1.png',  
+    'img/p3-star2.png',  
+    'img/p3-star3.png',  
+    'img/photo-album.png',  
+    'img/pitch.png',  
+    'img/ran-heart.png',  
+    'img/ran-heart2.png',  
+    'img/ranking.png',  
+    'img/reopen-show.png',  
+    'img/rule-btn.png',  
+    'img/rule-description.png',  
+    'img/shadow.png',  
+    'img/sidai3.png',  
+    'img/sidai4.png',  
+    'img/star2.png',  
+    'img/star3.png',  
+    'img/star4.png',  
+    'img/star5.png',  
+    'img/star6.png',  
+    'img/star7.png',  
+    'img/tab-4.png',  
+    'img/tab-5.png',  
+    'img/test.png',  
+    'img/title.png',  
+    'img/top- balloon1.png',  
+    'img/top-balloon2.png',  
+    'img/top-balloon3.png',  
+    'img/top-blue-balloon.png',  
+    'img/top-card.png',  
+    'img/top-hua.png',  
+    'img/top-sidai.png',  
+    'img/top-sidai1.png',  
+    'img/top-star.png',  
+    ];  
+    
 $(function () {
-    /*  $.preload(manifest,{
+   $.preload(manifest,{
          order:true,
-         minTimer:4000,
+         minTimer:2000,
          each:function(count){
-                  
+      
+                  console.log(Math.ceil(count/manifest.length*100));
          },
          end:function(){
-         console.log('结束');  
-         }
-     }) */
-
-    setTimeout(function () {
-        $('.index').removeClass('dn')
+       /*  $('.index').removeClass('dn') */
         //打开创建海报
         $('.model-top').click(function () {
 
@@ -107,8 +220,11 @@ $(function () {
         })
 
 
-
-
+        new Swiper('.swiper-container');
+//撕掉标签按钮事件
+   $('.label').click(function(){
+        $(this).addClass('backOutDown')
+   })
         /* 排行榜数据  */
         data = {
             arr: [
@@ -156,9 +272,10 @@ $(function () {
                 },
             ]
         }
+
         var htmlStr = template('rank', data);
         $('.list').html(htmlStr);
-    });
+   
 
 
     var startX = 0;
@@ -250,4 +367,7 @@ $(function () {
 
         })
     }
-},4000);
+}
+}) 
+
+});
