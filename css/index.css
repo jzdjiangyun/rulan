@@ -785,6 +785,24 @@ html {
   top: 1265px;
   left: 470px;
 }
+.test-result .back {
+  position: absolute;
+  top: 40px;
+  left: 650px;
+}
+.test-result .back img {
+  position: static;
+}
+.test-result .rahmen {
+  position: absolute;
+  top: 160px;
+  width: 592px;
+  left: 50%;
+  margin-left: -296px;
+}
+.test-result .rahmen img {
+  position: static;
+}
 @keyframes width {
   0% {
     width: 0px;
