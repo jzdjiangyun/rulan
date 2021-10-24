@@ -803,6 +803,104 @@ html {
 .test-result .rahmen img {
   position: static;
 }
+.test-result .photo-ul {
+  width: 552px;
+  height: 816px;
+  position: absolute;
+  left: 50%;
+  margin-left: -276px;
+  top: 180px;
+}
+.test-result .photo-ul li {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  box-sizing: border-box;
+  overflow: hidden;
+  display: none;
+}
+.test-result .photo-ul li .rahmen-title {
+  text-align: center;
+}
+.test-result .photo-ul li .rahmen-title img {
+  position: static;
+}
+.test-result .photo-ul .wywq .rahmen-glisten {
+  top: 40px;
+  left: 315px;
+}
+.test-result .photo-ul .wywq .rahmen-glisten2 {
+  top: 480px;
+  left: -10px;
+}
+.test-result .photo-ul .wywq .head {
+  top: 220px;
+}
+.test-result .photo-ul .fxmn .rahmen-glisten {
+  top: 40px;
+  left: 45px;
+}
+.test-result .photo-ul .fxmn .rahmen-glisten2 {
+  top: 477px;
+  left: 213px;
+}
+.test-result .photo-ul .fxmn .head {
+  top: 180px;
+  left: 35px;
+}
+.test-result .photo-ul .wwbm .rahmen-glisten {
+  top: 45px;
+  left: 312px;
+}
+.test-result .photo-ul .wwbm .rahmen-glisten2 {
+  top: 480px;
+  left: -10px;
+}
+.test-result .photo-ul .wwbm .head {
+  top: 180px;
+  left: 75px;
+}
+.test-result .photo-ul .dxdr .rahmen-glisten {
+  top: 40px;
+  left: 40px;
+}
+.test-result .photo-ul .dxdr .rahmen-glisten2 {
+  top: 475px;
+  left: 215px;
+}
+.test-result .photo-ul .dxdr .head {
+  top: 170px;
+  left: 65px;
+}
+.test-result .photo-ul .hrym .rahmen-glisten {
+  top: 40px;
+  left: 45px;
+}
+.test-result .photo-ul .hrym .rahmen-glisten2 {
+  top: 477px;
+  right: 0px;
+}
+.test-result .photo-ul .hrym .head {
+  top: 177px;
+}
+.test-result .font-bg {
+  position: relative;
+  width: 560px;
+  height: 60px;
+  top: 1050px;
+  left: 50%;
+  margin-left: -280px;
+}
+.test-result .font-bg .font {
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  margin: auto;
+}
+.test-result .font-bg2 {
+  top: 1075px;
+}
 @keyframes width {
   0% {
     width: 0px;
