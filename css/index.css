@@ -901,6 +901,115 @@ html {
 .test-result .font-bg2 {
   top: 1075px;
 }
+.map .star {
+  top: 273px;
+  left: 678px;
+}
+.map .star1 {
+  top: 342px;
+  left: 158px;
+}
+.map .star2 {
+  top: 456px;
+  left: 614px;
+}
+.map .star3 {
+  top: 777px;
+  left: 200px;
+}
+.map .star4 {
+  top: 992px;
+  left: 111px;
+}
+.map .star5 {
+  top: 1088px;
+  left: 615px;
+}
+.map .back {
+  position: absolute;
+  top: 40px;
+  left: 650px;
+}
+.map .back img {
+  position: static;
+}
+.map .search {
+  width: 560px;
+  height: 57px;
+  border: 3px solid #002d72;
+  box-sizing: border-box;
+  border-radius: 28px;
+  line-height: 57px;
+  text-align: center;
+  left: 50%;
+  margin-left: -280px;
+  position: relative;
+  top: 80px;
+}
+.map .search input {
+  font-size: 23px;
+  color: #002d72;
+}
+.map .search input::placeholder {
+  font-size: 23px;
+  color: #002d72;
+  text-align: center;
+}
+.map .search .search-box {
+  position: absolute;
+  top: 50%;
+  right: 20px;
+  width: 28px;
+  height: 28px;
+  transform: translateY(-50%);
+}
+.map .search .search-box img {
+  position: static;
+  display: block;
+}
+.map .select-ul {
+  width: 560px;
+  height: 58px;
+  display: flex;
+  justify-content: space-between;
+  position: absolute;
+  top: 167px;
+  left: 50%;
+  transform: translateX(-50%);
+}
+.map .select-ul li {
+  position: relative;
+}
+.map .select-ul li .select-bg {
+  position: static;
+}
+.map .select-ul li div {
+  width: 100%;
+  height: 100%;
+  line-height: 58px;
+  text-align: center;
+  position: absolute;
+}
+.map .select-ul li div img {
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+.map .select-ul li .sheng {
+  width: 179px;
+  height: 300px;
+  overflow-y: auto;
+}
+.map .select-ul li .sheng li {
+  border: 3px solid #002d72;
+  font-size: 23px;
+  color: #002d72;
+  background-color: #b1e4e3;
+  border-radius: 26px;
+  box-sizing: border-box;
+  line-height: 58px;
+  text-align: center;
+}
 @keyframes width {
   0% {
     width: 0px;
@@ -978,19 +1087,17 @@ html {
 }
 @keyframes backOutDown {
   0% {
-    -webkit-transform: scale(1);
-    transform: scale(1);
-    opacity: 1;
+    z-index: 10;
   }
   20% {
-    -webkit-transform: translateY(0px) scale(0.7);
-    transform: translateY(0px) scale(0.7);
-    opacity: 0.7;
+    -webkit-transform: translateY(0px);
+    transform: translateY(0px);
+    z-index: 10;
   }
   100% {
-    -webkit-transform: translateY(700px) scale(0.7);
-    transform: translateY(700px) scale(0.7);
-    opacity: 0.7;
+    -webkit-transform: translateY(570px);
+    transform: translateY(570px);
+    z-index: 10;
   }
 }
 @media screen and (max-height: 1230px) {
